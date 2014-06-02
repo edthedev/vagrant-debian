@@ -15,6 +15,8 @@ Add the bridged IP address to your `/etc/ansible/hosts` file::
 Modify your `playbook.yml` to only point to the Vagrant VM::
 
     hosts: vagrant    
+    user: vagrant
+    sudo: yes # necessary if you just switched away from root
 
 Run your playbook.::
 
