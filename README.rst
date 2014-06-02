@@ -1,9 +1,13 @@
 Create the virtual machine::
 
+    cd vagrant-debian # directory next to Vagrantfile
     vagrant up
 
 Install your SSH key::
 
+    ssh-keygen -t rsa # (if needed)
+    cd vagrant-debian # directory next to Vagrantfile
+    cp ~/.ssh/id_rsa.pub . 
     vagrant ssh
     cat /vagrant/id_rsa.pub >> ~/.ssh/authorized_keys
 
